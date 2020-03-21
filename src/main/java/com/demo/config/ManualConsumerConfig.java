@@ -32,6 +32,12 @@ public class ManualConsumerConfig {
         // 手动提交
         configProps.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
 
+        /**
+         * 手动提交偏移量，需要通过设置ackMode，sasl环境下需要制定sasl配置
+         */
+//        configProps.put("sasl.mechanism","PLAIN");
+//        configProps.put("security.protocol","SASL_PLAINTEXT");
+
         ConcurrentKafkaListenerContainerFactory<String, String> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(new DefaultKafkaConsumerFactory<>(configProps));
