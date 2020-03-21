@@ -1,0 +1,19 @@
+spring:
+  kafka:
+    bootstrap-servers: master1:9092,slave1:9092,slave2:9092
+    producer:
+      acks: 1
+      retries: 3
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    #      properties:
+#        sasl.mechanism: PLAIN
+#        security.protocol: SASL_PLAINTEXT
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      properties:
+#        sasl.mechanism: PLAIN
+#        security.protocol: SASL_PLAINTEXT
+server:
+  port: 8500
