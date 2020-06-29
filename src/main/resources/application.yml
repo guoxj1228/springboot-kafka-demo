@@ -9,11 +9,13 @@ spring:
     #      properties:
 #        sasl.mechanism: PLAIN
 #        security.protocol: SASL_PLAINTEXT
+#        sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username='admin' password='admin';
     consumer:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 #      properties:
 #        sasl.mechanism: PLAIN
 #        security.protocol: SASL_PLAINTEXT
+#        sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username='admin' password='admin';
 server:
   port: 8500

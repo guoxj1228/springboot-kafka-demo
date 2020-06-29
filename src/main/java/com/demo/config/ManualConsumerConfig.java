@@ -37,6 +37,8 @@ public class ManualConsumerConfig {
          */
 //        configProps.put("sasl.mechanism","PLAIN");
 //        configProps.put("security.protocol","SASL_PLAINTEXT");
+//        configProps.put("sasl.jaas.config","org.apache.kafka.common.security.plain.PlainLoginModule required username='admin' password='admin';");
+
 
         ConcurrentKafkaListenerContainerFactory<String, String> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
